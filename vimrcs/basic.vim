@@ -135,6 +135,8 @@ set tm=500
 set foldcolumn=1
 
 
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,6 +147,9 @@ try
     colorscheme desert
 catch
 endtry
+
+
+
 
 set background=dark
 
@@ -419,3 +424,50 @@ endfunction
 " if has("autocmd")
 "   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
+"
+"
+"
+"
+" Vladimir Aerov, additional data
+set number
+"source /home/user/.vim_runtime/sources_non_forked/highlight/highlight.vim
+source /home/user/.vim_runtime/sources_non_forked/cscope_quickfix/cscope_map.vim
+source /home/user/.vim_runtime/sources_non_forked/taglist/taglist.vim
+source /home/user/.vim_runtime/sources_non_forked/starsearch/starsearch.vim
+source /home/user/.vim_runtime/sources_non_forked/svndiff/svndiff.vim
+
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=4    " Indents will have a width of 4
+set softtabstop=4   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
+
+
+map <F2> :TlistOpen<CR>
+map <F3> :TlistClose<CR>
+
+
+"noremap <C-q> :call Svndiff("prev")<CR>
+map 4 :call Svndiff("prev") <CR>
+map 6 :call Svndiff("next") <CR>
+
+
+fun! ShowFuncName()
+    let lnum = line(".")
+    let col = col(".")
+    echohl ModeMsg
+    echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
+    echohl None
+    call search("\\%" . lnum . "l" . "\\%" . col . "c")
+endfun
+map f :call ShowFuncName() <CR>
+
+
+
+set listchars=trail:.,tab:>-
+set list
+
+:set wrap
+"""" END

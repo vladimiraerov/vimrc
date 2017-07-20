@@ -483,3 +483,20 @@ endfunction
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+:hi ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
+set nowrap!
+set cursorline
+"hi Cursorline cterm=None ctermbg=blue ctermfg=green guibg=blue guifg=green
+:hi Cursorline cterm=None ctermbg=white ctermfg=black guibg=black guifg=black
+"hi Cursor guifg=green guibg=green
+
+hi TabLineSel ctermfg=Red ctermbg=Yellow
+hi TabLine ctermfg=Blue ctermbg=black
+
+set listchars=trail:.,tab:>-
+set list
+set wrap
+
