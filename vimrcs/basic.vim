@@ -430,11 +430,11 @@ endfunction
 "
 " Vladimir Aerov, additional data
 set number
-"source /home/user/.vim_runtime/sources_non_forked/highlight/highlight.vim
-source /home/user/.vim_runtime/sources_non_forked/cscope_quickfix/cscope_map.vim
-source /home/user/.vim_runtime/sources_non_forked/taglist/taglist.vim
-source /home/user/.vim_runtime/sources_non_forked/starsearch/starsearch.vim
-source /home/user/.vim_runtime/sources_non_forked/svndiff/svndiff.vim
+"source /home/$USER/.vim_runtime/sources_non_forked/highlight/highlight.vim
+source /home/$USER/.vim_runtime/sources_non_forked/cscope_quickfix/cscope_map.vim
+source /home/$USER/.vim_runtime/sources_non_forked/taglist/taglist.vim
+source /home/$USER/.vim_runtime/sources_non_forked/starsearch/starsearch.vim
+source /home/$USER/.vim_runtime/sources_non_forked/svndiff/svndiff.vim
 
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
