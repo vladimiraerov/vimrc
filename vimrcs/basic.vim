@@ -431,7 +431,7 @@ endfunction
 " Vladimir Aerov, additional data
 set number
 "source /home/$USER/.vim_runtime/sources_non_forked/highlight/highlight.vim
-source /home/$USER/.vim_runtime/sources_non_forked/cscope_quickfix/cscope_map.vim
+source /home/$USER/.vim_runtime/sources_non_forked/cscope/cscope_map.vim
 source /home/$USER/.vim_runtime/sources_non_forked/taglist/taglist.vim
 source /home/$USER/.vim_runtime/sources_non_forked/starsearch/starsearch.vim
 source /home/$USER/.vim_runtime/sources_non_forked/svndiff/svndiff.vim
